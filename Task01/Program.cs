@@ -1,18 +1,21 @@
 ﻿//Задача 42: Определить, сколько чисел больше 0 введено с клавиатуры.
-int x=0;
-Console.WriteLine("Введите колличество цифр: ");
-x = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число 1: ");
-x = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число 2: ");
-x = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число 3: ");
-x = Convert.ToInt32(Console.ReadLine());
+Console.Clear();
+int j = 0;
+Console.Write("Введите колличество элементов: ");
+int n = int.Parse(Console.ReadLine());
+int[] myArray = new int[n]; // 
+for (int i = 0; i < myArray.Length; i++)
 {
-    if (x >= 0)
-        Console.WriteLine("Положительных чисел: " + x);
-        Console.ReadLine();
+    Console.Write($"Введите элемент по индексом {i}: ");
+    myArray[i] = int.Parse(Console.ReadLine()); ;
+}
+for (int i = 0; i < myArray.Length; i++)
+{
+    if (myArray[i] > 0)
+    {
+        j++;
     }
-
-
+}
+Console.WriteLine("Количество положительных чисел: ");
+Console.WriteLine(j);
 
